@@ -1,0 +1,9 @@
+click
+Flask~=2.2.5
+flask_basicauth
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+ultralytics~=8.1.24
+opencv-python~=4.9.0.80
