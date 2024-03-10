@@ -1,2 +1,4 @@
-ultralytics~=8.1.24
-opencv-python~=4.9.0.80
+Flask~=2.2.5
+flask_apscheduler
+# ultralytics~=8.1.24
+# opencv-python~=4.9.0.80
