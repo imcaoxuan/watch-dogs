@@ -13,7 +13,7 @@ scheduler = APScheduler()
 
 def get_frames():
     cap = cv2.VideoCapture(os.getenv('WDS_SOURCE'))
-    model = YOLO(f'{os.getenv("WDS_MODEL")}.pt')
+    model = YOLO(f'{os.getenv("WDS_MODEL", "model")}.pt')
     while cap.isOpened():
         # Read a frame from the video
         success, frame = cap.read()
@@ -44,9 +44,12 @@ def start():
 
 @app.route('/shutdown')
 def shutdown():
+    os.putenv('FLAG', 'False')
     if scheduler.running:
         scheduler.shutdown()
+        scheduler.remove_all_jobs()
         print('shutdown')
+        # todo
     return {}
 
 

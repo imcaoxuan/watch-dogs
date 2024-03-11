@@ -1,4 +1,3 @@
-import datetime
 import os
 import queue
 import uuid
@@ -9,8 +8,6 @@ from flask_apscheduler import APScheduler
 from flask_basicauth import BasicAuth
 
 import utils
-
-import time
 
 # logging.getLogger('werkzeug').setLevel('WARNING')
 app = Flask(__name__)
